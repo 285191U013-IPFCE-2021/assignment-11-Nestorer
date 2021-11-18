@@ -4,6 +4,11 @@ include(CTest)
 
 set(CMAKE_CXX_STANDARD 14)
 
+# adding o2 compile option to test that we do not get segmentation faults. 
+SET(GCC_COVERAGE_COMPILE_FLAGS "-O2")
+add_definitions(${GCC_COVERAGE_COMPILE_FLAGS})
+
+
 # static checks
 # if(MSVC)
 #   add_compile_options(/W4 /WX)
