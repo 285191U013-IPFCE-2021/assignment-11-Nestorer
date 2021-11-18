@@ -33,6 +33,10 @@ int sumwhile(int n)
 {
 
   // the ceiling is calculated at the point so we just avoid integer overflow;
+
+  // while yes we no longer assert(n>=1), our program still calculates the sum of integers 1 to n
+  // but this new assertion allows us to make the code a tiny bit tidier and well an added bonus is we
+  // can now calculate sumwhile(0) too! :)
   assert(n >= 0 && n <= 65535);
 
   int sum = 0;
